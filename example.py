@@ -67,7 +67,7 @@ async def dz_command(ctx: commands.Context) -> None:
     
 
 if __name__ == "__main__":
-    if BOT_TOKEN == "YOUR_BOT_TOKEN_HERE" or not BOT_TOKEN:
+    if BOT_TOKEN == "YOUR_BOT_TOKEN" or not BOT_TOKEN:
         raise ValueError("ERROR: Sai token. Nhập lại 'BOT_TOKEN'.")
     bot.run(BOT_TOKEN)
     
