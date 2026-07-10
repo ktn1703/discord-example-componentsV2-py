@@ -33,14 +33,14 @@ class CustomView(ui.LayoutView):
         container.add_item(ui.TextDisplay(main_content))  # Nạp nội dung vào Container
         container.add_item(ui.Separator())  # Chèn đường kẻ ngang
         container.add_item(ui.TextDisplay(footer_text))  # Thêm footer vào dưới cùng
-        container.add_item(ui.Separator())  # Chèn đường phân cách nằm giữa footer và hàng nút bấm
+        container.add_item(ui.Separator())  # Chèn đường kẻ ngang nằm giữa footer và hàng nút bấm
         
-        action_row = ui.ActionRow(  # Tạo khay chứa hàng ngang để sắp xếp các nút bấm
+        action_row = ui.ActionRow(  # Tạo khay chứa hàng nút bấm
             ui.Button(label="Server Support", style=discord.ButtonStyle.link, url="https://discord.gg/your-invite"),
             ui.Button(label="Your Channel", style=discord.ButtonStyle.link, url="https://youtube.com/@your-channel")
         )
         
-        container.add_item(action_row)  # Thêm khay chứa hàng ngang ActionRow vào bên trong khối Container
+        container.add_item(action_row)  # Thêm khay chứa hàng nút bấm vào khối Container
         self.add_item(container)  # Nạp toàn bộ item Container vào cấu trúc cây hiển thị của LayoutView
         
 
@@ -68,6 +68,6 @@ async def dz_command(ctx: commands.Context) -> None:
 
 if __name__ == "__main__":
     if BOT_TOKEN == "YOUR_BOT_TOKEN" or not BOT_TOKEN:
-        raise ValueError("ERROR: Sai token. Nhập lại 'BOT_TOKEN'.")
+        raise ValueError("ERROR: Sai token. Nhập lại 'BOT_TOKEN'!")
     bot.run(BOT_TOKEN)
     
