@@ -701,3 +701,6 @@ async def on_button_click(self, interaction: discord.Interaction):
 
 # Author
 Lino
+
+---
+Vanish Club
